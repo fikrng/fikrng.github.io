@@ -1,0 +1,13 @@
+html * {
+    font-family: "Martian Mono", monospace;
+    padding-left: 75px;
+}
+h1 {
+    font-size: 35px;
+}
+h3{
+    font-size: 20px;
+}
+.title1 {
+    padding-top: 50px;   
+}
