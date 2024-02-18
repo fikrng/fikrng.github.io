@@ -1,13 +1,46 @@
-html * {
+html * { 
+    background-color: #f0e8dc;
+    @media screen and (min-width: 600px) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @media screen and (min-width: 992px){
+        margin-left: 35px;
+        margin-right: 35px;
+    }
     font-family: "Martian Mono", monospace;
-    padding-left: 75px;
 }
-h1 {
-    font-size: 35px;
+.titletop {
+    @media screen and (max-width: 600px) {
+        font-size: 22px;
+    }
+    margin-top: 50px;   
 }
-h3{
-    font-size: 20px;
+.subtitle {
+    @media screen and (max-width: 600px) {
+        font-size: 13px;
+    }
 }
-.title1 {
-    padding-top: 50px;   
+.content{
+    @media screen and (max-width: 600px) {
+        font-size: 12px;
+    }
+    font-size: 14px;
+}
+.tophr {
+    width: 70%;
+    @media screen and (min-width: 600px) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @media screen and (min-width: 992px){
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+}
+.smtsend{
+    @media screen and (max-width: 600px) {
+        width: 30%;
+        height: 30%;
+    }
 }
