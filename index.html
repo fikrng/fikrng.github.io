@@ -1,35 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Poppins:wght@800&display=swap');
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presence</title>
+    <title>The Daily Times</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border-bottom: 4px double black;
+            padding: 10px 0;
+            text-transform: uppercase;
+        }
+        .sub-header {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .article {
+            padding: 20px;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+        }
+        .article-title {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .article p {
+            font-size: 1em;
+            line-height: 1.5;
+            display: none;
+        }
+        .sidebar {
+            padding: 20px;
+            border-left: 1px solid black;
+        }
+        .author-bio {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-left: 4px solid black;
+        }
+        .author-bio h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .author-bio p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 4px double black;
+        }
+    </style>
+    <script>
+        function toggleArticle(event) {
+            let paragraph = event.currentTarget.querySelector("p");
+            if (paragraph.style.display === "none" || paragraph.style.display === "") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
+        }
+    </script>
 </head>
-
-<body class="d-flex flex-column mb-3">
-    <div class="container" class="fixed-top">
-        <p class="h2 titletop">Hello, im Fikri Anggito</p>
-        <p class="h6 subtitle">A pyhsics student at University of Jenderal Soedirman</p>
-        <hr class="tophr">
-    </div>
+<body>
     <div class="container">
-        <p class="content"> Mahir bahasa inggris, bisa desain, sedikit matematika dan fisika. Suka main game (terlebih
-            indie), baca komik jepang, cerpen dan mendengarkan musik.</p>
-        <br>
-        <p class="subtitle">Projek Saya</p>
-        <div class="row">
-            <div class="col">
-                    <img src="semester end.png" alt="semester end video thumbnail" class="img-fluid smtsend" style="width:250px;height:188px;">
+        <div class="header">The Daily Times</div>
+        <div class="sub-header">Your Trusted Source for News</div>
+        
+        <div class="content">
+            <div class="main">
+                <div class="article" onclick="toggleArticle(event)">
+                    <div class="article-title">Breaking News: Major Event Happens</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin non felis vel sapien ultrices fermentum.</p>
+                </div>
+                
+                <div class="article" onclick="toggleArticle(event)">
+                    <div class="article-title">Politics: New Policy Introduced</div>
+                    <p>Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+
+                <div class="article" onclick="toggleArticle(event)">
+                    <div class="article-title">Science: Revolutionary Discovery</div>
+                    <p>Phasellus viverra nulla ut metus varius laoreet. Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
             </div>
+
+            <aside class="sidebar">
+                <div class="author-bio">
+                    <h3>About the Author</h3>
+                    <p>John Doe is an award-winning journalist with over 15 years of experience covering global events. He specializes in political analysis and investigative reporting.</p>
+                    <p>Having worked for multiple top-tier newspapers and news agencies, John has reported from the frontlines of conflicts, interviewed world leaders, and uncovered major political scandals. His dedication to factual and in-depth journalism has earned him numerous accolades.</p>
+                    <p>When he's not chasing the next big story, John enjoys mentoring young journalists, reading history books, and exploring different cultures through travel.</p>
+                </div>
+            </aside>
         </div>
+
+        <div class="footer">&copy; 2025 The Daily Times. All rights reserved.</div>
     </div>
 </body>
-
 </html>
