@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - The Daily Times</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" > <div class="header">FikRng</div> </a> 
+        
+        <div class="full-article">
+            <h1 id="display-title" class="article-header-main">Loading Title...</h1>
+            <div class="article-meta">Published January 10, 2026s</div>
+            
+            <div class="article-body">
+                <p>Insert your story text here. The layout is already optimized for readability with a classic serif font and newspaper-style margins.</p>
+                <p>The styling remains coherent with the main page, utilizing the same double-border headers and off-white background.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to pull the title from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title');
+        if (title) {
+            document.getElementById('display-title').innerText = title;
+        }
+    </script>
+</body>
+</html>
